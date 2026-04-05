@@ -240,15 +240,39 @@
       };
 
       // Sales
-      const tAED = n2(sf.totalAED), tKD = tAED != null ? tAED / AED2KD : null;
-      const trn = n2(sf.trn), foot = n2(sf.footfall);
-      const n7AED = n2(sf.no7AED), n7KD = n7AED != null ? n7AED / AED2KD : null;
-      const tProd = n2(sf.totalProducts), aura = n2(sf.aura);
-      const ipc = tProd != null && trn ? (tProd / trn).toFixed(2) : null;
-      const atv = tKD != null && trn ? (tKD / trn).toFixed(2) : null;
-      const conv = trn != null && foot ? ((trn / foot) * 100).toFixed(1) : null;
-      const n7pct = n7AED != null && tAED ? ((n7AED / tAED) * 100).toFixed(1) : null;
-      const auraPct = aura != null && trn ? ((aura / trn) * 100).toFixed(1) : null;
+// ── Sales Calculations ──
+const tAED = n2(sf.totalAED), tKD = tAED != null ? tAED / AED2KD : null;
+const trn = n2(sf.trn), foot = n2(sf.footfall);
+const n7AED = n2(sf.no7AED), n7KD = n7AED != null ? n7AED / AED2KD : null;
+const tProd = n2(sf.totalProducts), aura = n2(sf.aura);
+
+const ipc = tProd != null && trn ? (tProd / trn).toFixed(2) : null;
+
+// CHANGE THIS LINE: Use tAED instead of tKD
+const atv = tAED != null && trn ? (tAED / trn).toFixed(2) : null; 
+
+const conv = trn != null && foot ? ((trn / foot) * 100).toFixed(1) : null;
+const n7pct = n7AED != null && tAED ? ((n7AED / tAED) * 100).toFixed(1) : null;
+const auraPct = aura != null && trn ? ((aura / trn) * 100).toFixed(1) : null;
+// CHANGE THIS LINE: Use tAED instead of tKD
+const atv = tAED != null && trn ? (tAED / trn).toFixed(2) : null; 
+
+const conv = trn != null && foot ? ((trn / foot) * 100).toFixed(1) : null;
+const n7pct = n7AED != null && tAED ? ((n7AED / tAED) * 100).toFixed(1) : null;
+const auraPct = aura != null && trn ? ((aura / trn) * 100).toFixed(1) : null;// ── Sales Calculations ──
+const tAED = n2(sf.totalAED), tKD = tAED != null ? tAED / AED2KD : null;
+const trn = n2(sf.trn), foot = n2(sf.footfall);
+const n7AED = n2(sf.no7AED), n7KD = n7AED != null ? n7AED / AED2KD : null;
+const tProd = n2(sf.totalProducts), aura = n2(sf.aura);
+
+const ipc = tProd != null && trn ? (tProd / trn).toFixed(2) : null;
+
+// CHANGE THIS LINE: Use tAED instead of tKD
+const atv = tAED != null && trn ? (tAED / trn).toFixed(2) : null; 
+
+const conv = trn != null && foot ? ((trn / foot) * 100).toFixed(1) : null;
+const n7pct = n7AED != null && tAED ? ((n7AED / tAED) * 100).toFixed(1) : null;
+const auraPct = aura != null && trn ? ((aura / trn) * 100).toFixed(1) : null;;
 
       useEffect(() => {
         if (scr === "sales") {
