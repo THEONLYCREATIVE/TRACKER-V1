@@ -481,7 +481,7 @@ const auraPct = aura != null && trn ? ((aura / trn) * 100).toFixed(1) : null;;
                 <SH title="CALCULATED KPIs" />
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8, padding: "0 20px", marginBottom: 12 }}>
                   <KC l="IPC" s="Items/TRN" v={ipc} f="Products÷TRN" c="var(--teal)" />
-                  <KC l="ATV" s="Avg TRN (KD)" v={atv} f="KD÷TRN" c="#2A6B5E" />
+                  <KC l="ATV" s="Avg TRN (KD)" v={atv} f= c="#2A6B5E" />
                   <KC l="CONV %" s="Conversion" v={conv ? conv + "%" : null} f="TRN÷Foot×100" c="var(--amber)" />
                   <KC l="No7 %" s="No7 Share" v={n7pct ? n7pct + "%" : null} f="No7÷Total×100" c="#1B6B8A" />
                   <KC l="AURA %" s="Linkage" v={auraPct ? auraPct + "%" : null} f="AURA÷TRN×100" c="#8A5E1B" />
